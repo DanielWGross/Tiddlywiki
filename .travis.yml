@@ -7,7 +7,7 @@ sudo: false
 
 branches:
   only:
-  - master
+  - main
 
 install:
   - git clone --depth 1 https://github.com/Jermolene/TiddlyWiki5.git
@@ -21,7 +21,7 @@ script:
 deploy:
   provider: pages
   skip_cleanup: true
-  github_token: $TIDDLYWIKI_GITHUB_TOKEN # Set in the settings page of your repository, as a secure variable
+  github_token: $TIDDLYWIKI_GITHUB_TOKEN
   local_dir: output
   on:
-    branch: master
+    branch: main
